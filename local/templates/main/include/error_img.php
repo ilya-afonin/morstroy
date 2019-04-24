@@ -1,0 +1,1 @@
+<div class="bottom-water error__bg" style="background-image: url(/local/templates/main/tpl/build/img/water.jpg)"></div>

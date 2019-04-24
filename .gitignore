@@ -1,0 +1,44 @@
+# development environment
+.idea
+/node_modules
+
+# import & export
+/bitrix/catalog_export/
+/pdf/*.xml
+/*.xml
+
+# cache
+/bitrix/cache/
+/bitrix/managed_cache/
+/bitrix/stack_cache
+
+# host specific
+/bitrix/license_key.php
+/bitrix/php_interface/dbconn.php
+/bitrix/.settings.php
+/bitrix/.settings_extra.php
+web.config
+webstat
+
+# upload, logs, backups, temp & test, old
+/upload
+/bitrix/backup/
+/_log/git
+/*.sql
+*.log
+*.tmp
+*.csv
+*.zip
+*.tar
+*.txt
+*.tar.gz
+__*
+syslog
+*_old*
+/logs/
+/logs
+/files
+/images
+
+# Testing
+/test/

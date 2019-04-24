@@ -1,0 +1,1 @@
+<div class="bottom-water equipments-slider__bottom-bg" style="background-image: url(/local/templates/main/tpl/build/img/water.jpg)"></div>

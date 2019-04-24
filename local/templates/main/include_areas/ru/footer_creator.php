@@ -1,0 +1,1 @@
+<a class="footer__txt" href="https://cakelabs.ru" target="_blank">Разработка сайта — Cakelabs</a>

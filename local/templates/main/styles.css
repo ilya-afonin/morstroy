@@ -1,0 +1,26 @@
+.welcome__media-image {
+    position: absolute;
+    left: 0;
+    right: -50px;
+    bottom: 0;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: -webkit-transform 5s;
+    transition: -webkit-transform 5s;
+    transition: transform 5s;
+    transition: transform 5s, -webkit-transform 5s;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+@media screen and (min-width: 1600px) {
+    .welcome__media-image {
+        right: calc(((1600px - 100vw) / 2) - 55px);
+    } }
+
+
+
+.header_white .header__logo {
+    cursor: default;
+    pointer-events: none;
+}
