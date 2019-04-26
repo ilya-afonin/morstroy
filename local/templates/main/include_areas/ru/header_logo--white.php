@@ -3,3 +3,4 @@
   <source srcset="/local/templates/main/tpl/build/img/logo_white.svg">
   <img src="/local/templates/main/tpl/build/img/logo_white.svg" alt="Логотип компании Морстрой">
 </picture>
+

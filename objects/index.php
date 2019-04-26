@@ -1,240 +1,122 @@
-<?
-define('PAGE', 'objects');
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+<?require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+
 $APPLICATION->SetTitle("Объекты");
 $APPLICATION->SetPageProperty('class_header', 'header_white');
+$APPLICATION->SetPageProperty('class_header', 'header_white');
 
-?>
-
-  <section class="page__top-video pageTop">
-
-      <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include/video_bg.php", Array(), Array("MODE" => "html"))?>
-
-    <div class="container">
-      <h1 class="title">
-        <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/objects_title.php", Array(), Array("MODE" => "text"))?>
-      </h1>
-    </div>
-  </section>
-
-
-<? $APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"objects_list", 
+  $APPLICATION->IncludeComponent(
+	"bitrix:news", 
+	"objects", 
 	array(
+		"COMPONENT_TEMPLATE" => "objects",
 		"IBLOCK_TYPE" => "content",
 		"IBLOCK_ID" => "3",
-		"NEWS_COUNT" => "20",
-		"SORT_BY1" => "SORT",
-		"SORT_ORDER1" => "ASC",
+		"NEWS_COUNT" => "4",
+		"USE_SEARCH" => "N",
+		"USE_RSS" => "N",
+		"USE_RATING" => "N",
+		"USE_CATEGORIES" => "N",
+		"USE_REVIEW" => "N",
+		"USE_FILTER" => "Y",
 		"SORT_BY2" => "ACTIVE_FROM",
 		"SORT_ORDER2" => "DESC",
-		"FILTER_NAME" => "",
-		"FIELD_CODE" => array(
-			0 => "NAME",
-			1 => "PREVIEW_TEXT",
-			2 => "DETAIL_TEXT",
-			3 => "",
-		),
-		"PROPERTY_CODE" => array(
+		"SORT_BY1" => "SORT",
+		"SORT_ORDER1" => "ASC",
+		"CHECK_DATES" => "Y",
+		"SEF_MODE" => "Y",
+		"SEF_FOLDER" => "/objects/",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "N",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_TITLE" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
+		"USE_PERMISSIONS" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_PICTURE" => "N",
+		"DISPLAY_PREVIEW_TEXT" => "N",
+		"USE_SHARE" => "N",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"LIST_FIELD_CODE" => array(
 			0 => "",
 			1 => "",
 		),
-		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
-		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "36000006",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "N",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"ACTIVE_DATE_FORMAT" => "f Y",
-		"SET_TITLE" => "N",
-		"SET_STATUS_404" => "N",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "N",
+		"LIST_PROPERTY_CODE" => array(
+			0 => "PERIOD_START",
+			1 => "PERIOD_END",
+			2 => "CLIENT",
+			3 => "FEATURES",
+			4 => "SOSTAV",
+			5 => "SCHEMA",
+			6 => "",
+		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"PAGER_TEMPLATE" => ".default",
+		"DISPLAY_NAME" => "Y",
+		"META_KEYWORDS" => "-",
+		"META_DESCRIPTION" => "-",
+		"BROWSER_TITLE" => "-",
+		"DETAIL_SET_CANONICAL_URL" => "Y",
+		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"DETAIL_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"DETAIL_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "PERIOD_START",
+			2 => "PERIOD_END",
+			3 => "CLIENT",
+			4 => "FEATURES",
+			5 => "SOSTAV",
+			6 => "SCHEMA",
+			7 => "",
+		),
+		"DETAIL_DISPLAY_TOP_PAGER" => "N",
+		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
+		"DETAIL_PAGER_TITLE" => "Новость",
+		"DETAIL_PAGER_TEMPLATE" => "",
+		"DETAIL_PAGER_SHOW_ALL" => "N",
+		"PAGER_TEMPLATE" => "ajax_more",
 		"DISPLAY_TOP_PAGER" => "N",
-		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"PAGER_TITLE" => "Новости",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"COMPONENT_TEMPLATE" => "objects_list",
-		"SET_BROWSER_TITLE" => "Y",
-		"SET_META_KEYWORDS" => "Y",
-		"SET_META_DESCRIPTION" => "Y",
-		"SET_LAST_MODIFIED" => "N",
 		"PAGER_BASE_LINK_ENABLE" => "N",
+		"SET_STATUS_404" => "Y",
 		"SHOW_404" => "N",
 		"MESSAGE_404" => "",
-		"STRICT_SECTION_CHECK" => "N"
+		"FILTER_NAME" => "arrFilterObjectList",
+		"FILTER_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_PROPERTY_CODE" => array(
+			0 => "PERIOD_START",
+			1 => "",
+		),
+		"STRICT_SECTION_CHECK" => "N",
+		"SEF_URL_TEMPLATES" => array(
+			"news" => "",
+			"section" => "",
+			"detail" => "#ELEMENT_ID#/",
+		)
 	),
 	false
-); ?>
+);
+  ?>
 
-  <div class="equipments-slider">
-
-    <h2 class="equipments-slider__title title title_section">
-      <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/equipment_head.php", Array(), Array("MODE" => "text"))?>
-    </h2>
-
-    <? $APPLICATION->IncludeComponent(
-        "bitrix:news.list",
-        "equipment_slider",
-        array(
-            "IBLOCK_TYPE" => "content",
-            "IBLOCK_ID" => "5",
-            "NEWS_COUNT" => "20",
-            "SORT_BY1" => "SORT",
-            "SORT_ORDER1" => "ASC",
-            "SORT_BY2" => "ACTIVE_FROM",
-            "SORT_ORDER2" => "DESC",
-            "FILTER_NAME" => "",
-            "FIELD_CODE" => array(
-                0 => "NAME",
-            ),
-            "PROPERTY_CODE" => array(
-                0 => "FON",
-                1 => "",
-            ),
-            "CHECK_DATES" => "Y",
-            "DETAIL_URL" => "",
-            "AJAX_MODE" => "N",
-            "AJAX_OPTION_JUMP" => "N",
-            "AJAX_OPTION_STYLE" => "Y",
-            "AJAX_OPTION_HISTORY" => "N",
-            "CACHE_TYPE" => "A",
-            "CACHE_TIME" => "36000006",
-            "CACHE_FILTER" => "N",
-            "CACHE_GROUPS" => "N",
-            "PREVIEW_TRUNCATE_LEN" => "",
-            "ACTIVE_DATE_FORMAT" => "F Y",
-            "SET_TITLE" => "N",
-            "SET_STATUS_404" => "N",
-            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-            "ADD_SECTIONS_CHAIN" => "N",
-            "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-            "PARENT_SECTION" => "",
-            "PARENT_SECTION_CODE" => "",
-            "INCLUDE_SUBSECTIONS" => "Y",
-            "PAGER_TEMPLATE" => ".default",
-            "DISPLAY_TOP_PAGER" => "N",
-            "DISPLAY_BOTTOM_PAGER" => "N",
-            "PAGER_TITLE" => "Новости",
-            "PAGER_SHOW_ALWAYS" => "N",
-            "PAGER_DESC_NUMBERING" => "N",
-            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-            "PAGER_SHOW_ALL" => "N",
-            "DISPLAY_DATE" => "Y",
-            "DISPLAY_NAME" => "Y",
-            "DISPLAY_PICTURE" => "Y",
-            "DISPLAY_PREVIEW_TEXT" => "Y",
-            "AJAX_OPTION_ADDITIONAL" => "",
-            "COMPONENT_TEMPLATE" => "equipment_slider",
-            "SET_BROWSER_TITLE" => "Y",
-            "SET_META_KEYWORDS" => "Y",
-            "SET_META_DESCRIPTION" => "Y",
-            "SET_LAST_MODIFIED" => "N",
-            "PAGER_BASE_LINK_ENABLE" => "N",
-            "SHOW_404" => "N",
-            "MESSAGE_404" => "",
-            "STRICT_SECTION_CHECK" => "N"
-        ),
-        false
-    ); ?>
-
-    <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include/equipment_bg.php", Array(), Array("MODE" => "html"))?>
-
-  </div>
-
-  <section class="timeline">
-    <div class="container">
-
-      <h2 class="timeline__title title_section">
-        <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/timeline_title.php", Array(), Array("MODE" => "text"))?>
-      </h2>
-
-
-      <? $APPLICATION->IncludeComponent(
-          "bitrix:news.list",
-          "timeline_slider",
-          array(
-              "IBLOCK_TYPE" => "content",
-              "IBLOCK_ID" => "6",
-              "NEWS_COUNT" => "20",
-              "SORT_BY1" => "SORT",
-              "SORT_ORDER1" => "ASC",
-              "SORT_BY2" => "ACTIVE_FROM",
-              "SORT_ORDER2" => "DESC",
-              "FILTER_NAME" => "",
-              "FIELD_CODE" => array(
-                  0 => "NAME",
-              ),
-              "PROPERTY_CODE" => array(
-                  0 => "WORKS",
-                  1 => "",
-              ),
-              "CHECK_DATES" => "Y",
-              "DETAIL_URL" => "",
-              "AJAX_MODE" => "N",
-              "AJAX_OPTION_JUMP" => "N",
-              "AJAX_OPTION_STYLE" => "Y",
-              "AJAX_OPTION_HISTORY" => "N",
-              "CACHE_TYPE" => "A",
-              "CACHE_TIME" => "36000006",
-              "CACHE_FILTER" => "N",
-              "CACHE_GROUPS" => "N",
-              "PREVIEW_TRUNCATE_LEN" => "",
-              "ACTIVE_DATE_FORMAT" => "F Y",
-              "SET_TITLE" => "N",
-              "SET_STATUS_404" => "N",
-              "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-              "ADD_SECTIONS_CHAIN" => "N",
-              "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-              "PARENT_SECTION" => "",
-              "PARENT_SECTION_CODE" => "",
-              "INCLUDE_SUBSECTIONS" => "Y",
-              "PAGER_TEMPLATE" => ".default",
-              "DISPLAY_TOP_PAGER" => "N",
-              "DISPLAY_BOTTOM_PAGER" => "N",
-              "PAGER_TITLE" => "Новости",
-              "PAGER_SHOW_ALWAYS" => "N",
-              "PAGER_DESC_NUMBERING" => "N",
-              "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-              "PAGER_SHOW_ALL" => "N",
-              "DISPLAY_DATE" => "Y",
-              "DISPLAY_NAME" => "Y",
-              "DISPLAY_PICTURE" => "Y",
-              "DISPLAY_PREVIEW_TEXT" => "Y",
-              "AJAX_OPTION_ADDITIONAL" => "",
-              "COMPONENT_TEMPLATE" => "timeline_slider",
-              "SET_BROWSER_TITLE" => "Y",
-              "SET_META_KEYWORDS" => "Y",
-              "SET_META_DESCRIPTION" => "Y",
-              "SET_LAST_MODIFIED" => "N",
-              "PAGER_BASE_LINK_ENABLE" => "N",
-              "SHOW_404" => "N",
-              "MESSAGE_404" => "",
-              "STRICT_SECTION_CHECK" => "N"
-          ),
-          false
-      ); ?>
-
-    </div>
-  </section>
-
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

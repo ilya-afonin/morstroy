@@ -14,9 +14,6 @@ Loc::loadMessages(__FILE__);
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-Debug::dtc($arParams,'params');
-Debug::dtc($arResult,'result');
-
 ?>
 
 <div class="img-bg" <?if(!empty($arResult['DETAIL_PICTURE']['SRC'])){?>style="background-image: url(<?=$arResult['DETAIL_PICTURE']['SRC']?>)"<?}?>></div>

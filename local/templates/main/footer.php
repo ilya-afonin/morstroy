@@ -79,6 +79,7 @@ Loc::loadMessages(__FILE__);
   </div>
 </template>
 
+<div class="tmp_for_json" style="display: none;"></div>
 
 <?// $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/popups.php", Array(), Array("MODE" => "html")); ?>
 

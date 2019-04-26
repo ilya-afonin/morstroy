@@ -52,7 +52,7 @@ Loc::loadMessages(__FILE__);
             <h4><?=Loc::getMessage('DESC')?></h4>
             <p><?=$arItem['DETAIL_TEXT']?></p>
           </div>
-          <div class="timeline-card__link"><a href="#"><?=Loc::getMessage('MORE')?></a></div>
+          <div class="timeline-card__link"><a href="<?=$arItem['DETAIL_PAGE_URL']?>"><?=Loc::getMessage('MORE')?></a></div>
         </article>
 
       <?endforeach;?>

@@ -7,6 +7,11 @@ $APPLICATION->SetPageProperty('description', '');
 
     <section class="home__inner">
 
+      <div class="home__links">
+        <a class="button" href="/about/" alt="О компании">О компании</a>
+        <a class="home__link" href="/objects/" alt="Объекты">Объекты</a>
+      </div>
+
       <? $APPLICATION->IncludeComponent(
           "bitrix:news.list",
           "main_slider",

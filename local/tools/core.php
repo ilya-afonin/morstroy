@@ -65,8 +65,75 @@ switch ($case_param):
     die();
     break;
 
-  case 'solutions_list':
+  case "timelineDetail":
 
+    ob_start();
+
+    $ElementID = $data['requestParams']['id'];
+
+    include($_SERVER["DOCUMENT_ROOT"]."/local/tools/ajax/equipment_detail.php");
+
+    $content = ob_get_contents();
+    ob_end_clean();
+
+    echo json_encode(
+        array(
+            'DETAIL_TIMELINE' => trim($content)
+        )
+    );
+
+    die();
+    break;
+
+
+  case "objects_list" :
+
+    ob_start();
+
+    $sectionCode = htmlentities($data['requestParams']['section_code']);
+
+    // for current url
+    //$_SERVER["REQUEST_URI"] = $sectionCode!==false?'/objects/'.$sectionCode.'/':$arParams["REQUEST_URI"];
+    $_SERVER["REQUEST_URI"] = $arParams["REQUEST_URI"];
+    $_SERVER["SCRIPT_NAME"] = $arParams["SCRIPT_NAME"];
+
+    include($_SERVER["DOCUMENT_ROOT"] . "/local/tools/ajax/objects_list.php");
+
+    $content = ob_get_contents();
+    ob_end_clean();
+
+    echo json_encode(
+        array(
+            'OBJECTS_LIST' => trim($content)
+        )
+    );
+
+    die();
+    break;
+
+  case "feeds_list" :
+
+    ob_start();
+
+    // for current url
+    $_SERVER["REQUEST_URI"] = $arParams["REQUEST_URI"];
+    $_SERVER["SCRIPT_NAME"] = $arParams["SCRIPT_NAME"];
+
+    include($_SERVER["DOCUMENT_ROOT"] . "/local/tools/ajax/feeds_list.php");
+
+    $content = ob_get_contents();
+    ob_end_clean();
+
+    echo json_encode(
+        array(
+            'OBJECTS_LIST' => trim($content)
+        )
+    );
+
+    die();
+    break;
+
+  case 'solutions_list':
 
     $APPLICATION->IncludeComponent(
         "bitrix:catalog.smart.filter",

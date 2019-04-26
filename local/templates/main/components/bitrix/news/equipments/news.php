@@ -84,5 +84,3 @@ $this->setFrameMode(true);
   ),
   $component
 ); ?>
-
-<template id="equipmentDetail"></template>

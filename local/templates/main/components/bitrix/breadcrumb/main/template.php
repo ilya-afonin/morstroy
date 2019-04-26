@@ -13,7 +13,12 @@ if(empty($arResult)) return "";
 
 $strReturn = '';
 
-$strReturn .= '<div class="breadcrumbs">';
+$breadClass = '';
+if (!in_array(CUR_DIR, array("/objects/"))){
+  $breadClass = ' breadcrumbs_color';
+}
+
+$strReturn .= '<div class="breadcrumbs'.$breadClass.'">';
 $strReturn .= '<div class="container">';
 $strReturn .= ' <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">';
 
