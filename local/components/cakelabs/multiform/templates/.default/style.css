@@ -1,0 +1,13 @@
+.np_error_mess {
+    color: red;
+}
+
+.np_form_ok_mess {
+    color: green;
+}
+.np_hidden{
+    display:none;
+}
+/*input[placeholder],textarea[placeholder]{*/
+    /*color:red;*/
+/*}*/

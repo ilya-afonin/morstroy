@@ -14,7 +14,7 @@ if(empty($arResult)) return "";
 $strReturn = '';
 
 $breadClass = '';
-if (!in_array(CUR_DIR, array("/objects/"))){
+if($APPLICATION->GetProperty("header_white") != 'Y'){
   $breadClass = ' breadcrumbs_color';
 }
 

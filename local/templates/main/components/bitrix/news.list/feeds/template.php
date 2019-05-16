@@ -19,8 +19,8 @@ $this->setFrameMode(true);
 <? if (count($arResult['ITEMS']) > 0): ?>
   <? foreach ($arResult['ITEMS'] as $k => $arItem): ?>
   <article class="feed-preview<?=($k % 2 == 1)?' feed-preview_turn':''?>">
-    <div class="feed-preview__img" style="background-image: url(<?=$arItem['DETAIL_PICTURE']['SRC']?>)">
-      <img src="<?=$arItem['RESIZED_PICTURE']['SRC']?>" alt="<?=$arItem['NAME']?>" data-full="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"/>
+    <div class="feed-preview__img" style="background-image: url(<?=$arItem['DETAIL_PICTURE']['SRC']?>)" data-full="<?=$arItem['PREVIEW_PICTURE']['SRC']?>">
+      <img src="<?=$arItem['RESIZED_PICTURE']['SRC']?>" alt="<?=$arItem['NAME']?>"/>
     </div>
     <div class="feed-preview__text">
       <h3 class="title"><?=$arItem['NAME']?></h3>

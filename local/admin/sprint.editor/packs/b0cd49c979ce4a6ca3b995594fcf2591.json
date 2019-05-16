@@ -1,0 +1,48 @@
+{
+  "packname": "Блок с 3 картинками и описанием",
+  "version": 2,
+  "blocks": [
+    {
+      "name": "complex_image_text",
+      "image": {
+        "file": [],
+        "desc": ""
+      },
+      "text": {
+        "value": ""
+      },
+      "layout": "0,0"
+    },
+    {
+      "name": "complex_image_text",
+      "image": {
+        "file": [],
+        "desc": ""
+      },
+      "text": {
+        "value": ""
+      },
+      "layout": "0,0"
+    },
+    {
+      "name": "complex_image_text",
+      "image": {
+        "file": [],
+        "desc": ""
+      },
+      "text": {
+        "value": ""
+      },
+      "layout": "0,0"
+    }
+  ],
+  "layouts": [
+    {
+      "columns": [
+        {
+          "css": "my_3_items_in_row"
+        }
+      ]
+    }
+  ]
+}

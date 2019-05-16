@@ -2,7 +2,6 @@
 
 $APPLICATION->SetTitle("Объекты");
 $APPLICATION->SetPageProperty('class_header', 'header_white');
-$APPLICATION->SetPageProperty('class_header', 'header_white');
 
   $APPLICATION->IncludeComponent(
 	"bitrix:news", 

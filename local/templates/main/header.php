@@ -8,6 +8,7 @@ use Bitrix\Main\Localization\Loc,
     Cake\Helpers\Main;
 
 Loc::loadMessages(__FILE__);
+global $APPLICATION;
 ?>
 <!DOCTYPE html>
 
@@ -53,7 +54,11 @@ Loc::loadMessages(__FILE__);
 
 
       <a class="header__logo" href="/" alt="Главная">
-
+        <?
+        if(CUR_DIR == '/services/'){
+          $APPLICATION->SetPageProperty("header_white", 'Y');
+        }
+        ?>
         <?if($APPLICATION->GetProperty("header_white") == 'Y'):?>
 
           <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/header_logo--white.php", Array(), Array("MODE" => "html"))?>

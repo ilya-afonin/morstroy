@@ -1,0 +1,49 @@
+{
+  "packname": "Таблица",
+  "version": 2,
+  "blocks": [
+    {
+      "rows": [
+        [
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          }
+        ]
+      ],
+      "name": "table",
+      "layout": "0,0"
+    }
+  ],
+  "layouts": [
+    {
+      "columns": [
+        {
+          "css": "my_table"
+        }
+      ]
+    }
+  ]
+}

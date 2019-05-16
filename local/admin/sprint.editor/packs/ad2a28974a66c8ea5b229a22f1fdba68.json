@@ -1,0 +1,20 @@
+{
+  "packname": "Ссылка на файл",
+  "version": 2,
+  "blocks": [
+    {
+      "files": [],
+      "name": "files",
+      "layout": "0,0"
+    }
+  ],
+  "layouts": [
+    {
+      "columns": [
+        {
+          "css": "file_link"
+        }
+      ]
+    }
+  ]
+}

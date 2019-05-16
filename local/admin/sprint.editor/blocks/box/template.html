@@ -1,0 +1,44 @@
+<div class="sp-x-box" data-uid="{{=it.uid}}">
+    <div class="sp-x-buttons sp-x-buttons-box">
+        {{?it.enableChange}}
+        <span title="{{=it.hint}}" class="sp-x-btn sp-x-box-handle">{{=it.title}}</span>
+        {{??}}
+        <span title="{{=it.hint}}" class="sp-x-btn ">{{=it.title}}</span>
+        {{?}}
+
+        <div class="sp-x-buttons-group">
+            {{?it.enableChange}}
+            <span title="Вставить блоки после этого блока" class="sp-x-btn sp-x-lt-block-paste">&crarr;</span>
+            <span title="Копировать блок" class="sp-x-btn sp-x-box-copy">&equiv;</span>
+            <span class="sp-x-btn sp-x-pp-box-open">...</span>
+            {{?}}
+        </div>
+
+        <div class="sp-x-pp-box">
+            {{?it.enableChange}}
+            <span title="Поднять вверх" class="sp-x-btn sp-x-box-up">&uarr;</span>
+            <span title="Опустить вниз" class="sp-x-btn sp-x-box-dn">&darr;</span>
+            <span title="Удалить блок" class="sp-x-btn sp-x-box-del">x</span>
+            {{?}}
+        </div>
+    </div>
+
+    {{?it.compiled}}
+    <div class="sp-x-box-settings">
+        {{~it.compiled :item}}
+        <div data-name="{{!item.name}}" class="sp-x-box-settings-group">
+            {{~item.options :option}}
+            {{?option.selected}}
+            <span class="sp-active" data-value="{{!option.value}}">{{=option.title}}</span>
+            {{??}}
+            <span data-value="{{!option.value}}">{{=option.title}}</span>
+            {{?}}
+            {{~}}
+        </div>
+        {{~}}
+    </div>
+    {{?}}
+
+    <div class="sp-x-box-block"></div>
+
+</div>

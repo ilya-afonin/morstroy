@@ -34,7 +34,7 @@ $this->setFrameMode(true);
             <?else:?>
 
               <li class="nav__inner-item">
-                <span class="nav__sublist-arrow nav__sublist-arrow_white"></span><?=$arItem["TEXT"]?>
+                <span class="nav__sublist-arrow<?if($APPLICATION->GetProperty("header_white") == 'Y' ) echo ' nav__sublist-arrow_white';?>"></span><?=$arItem["TEXT"]?>
                 <ul class="nav__sublist">
                   <?php foreach($arItem["CHILD"] as $child){ ?>
                     <li class="nav__subitem">
