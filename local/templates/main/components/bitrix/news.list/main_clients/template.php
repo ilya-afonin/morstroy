@@ -4,9 +4,22 @@ use Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);
 
+switch (PAGE){
+  case 'home':
+    $class = ' home__clients';
+    break;
+  case 'about':
+    $class = ' reviews__clients';
+    break;
+  default:
+    $class = '';
+    break;
+}
 ?>
 
-<div class="clients home__clients" >
+
+
+<div class="clients<?=$class?>">
 
   <?foreach ($arResult['ITEMS'] as $i => $arItem):?>
     <?
@@ -21,6 +34,11 @@ Loc::loadMessages(__FILE__);
 
   <?endforeach;?>
 
-  <a class="clients__link home__clients-link" href="/feeds/" alt="<?=Loc::getMessage('SHOW_ALL')?>"><?=Loc::getMessage('SHOW_ALL')?> →</a>
-
+  <a class="clients__link <?=$class?>-link<?=(PAGE == 'about')?' button':''?>" href="/feeds/" alt="<?=Loc::getMessage('SHOW_ALL')?>">
+    <?if(PAGE == 'about'):?>
+      <?=Loc::getMessage('SHOW_ALL_ABOUT')?> →
+    <?else:?>
+      <?=Loc::getMessage('SHOW_ALL')?> →</a>
+    <?endif;?>
+  </a>
 </div>

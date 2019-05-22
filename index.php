@@ -1,5 +1,6 @@
 <?
 define('PAGE_CLASS', 'home');
+define('PAGE', 'home');
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Морстрой");
 $APPLICATION->SetPageProperty('description', '');

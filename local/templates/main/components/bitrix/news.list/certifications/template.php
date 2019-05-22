@@ -20,10 +20,14 @@ $this->setFrameMode(true);
 
   <section class="license">
     <div class="container license__container">
-      <div class="license__inner certificates__inner">
-        <div class="license__title-wrap certificates__title-wrap">
-          <h2 class="license__title title_section">Гарантированное качество</h2>
-          <p class="license__desc">Лицензии и сертификаты</p>
+      <div class="license__inner <?if(PAGE == 'certificates') echo ' certificates__inner'?>">
+        <div class="license__title-wrap<?if(PAGE == 'certificates') echo ' certificates__title-wrap'?>">
+          <h2 class="license__title title_section">
+            <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/licenses_title.php", Array(), Array("NAME" => "лицензии(заголовок)", "MODE" => "text"))?>
+          </h2>
+          <p class="license__desc">
+            <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/licenses_desc.php", Array(), Array("NAME" => "лицензии(описание)", "MODE" => "text"))?>
+          </p>
         </div>
         <div class="license__list-wrap">
           <ul class="license__list">
