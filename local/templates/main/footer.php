@@ -70,9 +70,14 @@ Loc::loadMessages(__FILE__);
   <div class="callback">
     <h1 class="callback__title title_section">Начните сотрудничать с&nbsp;нами</h1>
     <p class="callback__desc">Оставьте свой номер телефона, <br>и в&nbsp;ближайшее время наш специалист свяжется с вами.</p>
-    <form class="callback__form" method="post" action=""><input class="callback__phone-area" id="phoneArea" type="tel" name="phone" placeholder="+7 (___) ___-__-__" value="+7" autofocus>
-      <div class="callback__checkbox-wrap"><input class="callback__checkbox" id="privacyPolicyCheckbox" type="checkbox" checked><label class="callback__checkbox-label" for="privacyPolicyCheckbox">Даю согласие на&nbsp;обработку моих персональных данных</label><a class="callback__privacy-policy" href="#" target="_blank" title="Просмотреть политику конфиденциальности">Политика конфиденциальности</a></div>
-      <div class="callback__send-inner"><button class="button callback__send-btn button callback__send-btn_disabled" type="submit">Отправить</button>
+    <form class="callback__form" method="post" action="/local/tools/form-handler.php">
+        <?=bitrix_sessid_post()?>
+      <input class="callback__phone-area" id="phoneArea" type="tel" name="phone" placeholder="+7 (___) ___-__-__" value="+7" autofocus>
+      <div class="callback__checkbox-wrap">
+        <input class="callback__checkbox" id="privacyPolicyCheckbox" name="privacy" type="checkbox" checked>
+        <label class="callback__checkbox-label" for="privacyPolicyCheckbox">Даю согласие на&nbsp;обработку моих персональных данных</label><a class="callback__privacy-policy" href="#" target="_blank" title="Просмотреть политику конфиденциальности">Политика конфиденциальности</a></div>
+      <div class="callback__send-inner">
+        <button class="button callback__send-btn button callback__send-btn_disabled" type="submit">Отправить</button>
         <p class="callback__message">23</p>
       </div>
     </form>
@@ -92,6 +97,10 @@ endif; ?>
 //$assets->addJs('https://api-maps.yandex.ru/2.1/?lang=ru_RU');
 
 $assets->addJs(SITE_TEMPLATE_PATH . '/tpl/build/js/script.min.js');
+if(PAGE == 'objects_detail'){?>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnBfjkthm12TGSQ7iu8-qj4el4uFiK9Nc&amp;callback=initMap" async defer></script>
+<?}
+
 //$assets->addJs('/dev.js');
 ?>
 

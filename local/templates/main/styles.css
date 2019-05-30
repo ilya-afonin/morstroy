@@ -17,10 +17,3 @@
     .welcome__media-image {
         right: calc(((1600px - 100vw) / 2) - 55px);
     } }
-
-
-
-.header_white .header__logo {
-    cursor: default;
-    pointer-events: none;
-}

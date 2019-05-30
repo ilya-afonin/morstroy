@@ -8,6 +8,14 @@ $arUrlRewrite=array (
     'PATH' => '/equipment/index.php',
     'SORT' => 100,
   ),
+  5 => 
+  array (
+    'CONDITION' => '#^/services/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/services/index.php',
+    'SORT' => 100,
+  ),
   3 => 
   array (
     'CONDITION' => '#^/objects/#',
@@ -24,11 +32,12 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/rest/index.php',
     'SORT' => 100,
   ),
-  /*1 =>
+  4 => 
   array (
-    'CONDITION' => '#^/objects/([0-9]+)/(\\?.*)?#',
-    'RULE' => 'ELEMENT_ID=$1',
-    'PATH' => '/objects/detail.php',
-    'SORT' => 200,
-  ),*/
+    'CONDITION' => '#^/news/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/news/index.php',
+    'SORT' => 100,
+  ),
 );

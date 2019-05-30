@@ -74,12 +74,6 @@ $this->setFrameMode(true);
     <?endif;?>
   </div>
 </section>
-
-<?/*HTML код карты для каждого объекта*/?>
-<?if(!empty($arResult['PROPERTIES']['MAP_CODE']['VALUE']['TEXT'])):?>
-  <?=html_entity_decode($arResult['PROPERTIES']['MAP_CODE']['VALUE']['TEXT']);?>
-<?endif;?>
-
 <? if(count($arResult['DISPLAY_PROPERTIES']['FEATURES']['VALUE']) > 0) { ?>
   <section class="steps">
     <div class="steps__container container">

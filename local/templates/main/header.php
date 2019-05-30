@@ -40,6 +40,7 @@ global $APPLICATION;
   <?Asset::getInstance()->addString('<meta name="format-detection" content="telephone=no" />')?>
 
   <script >document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+
 </head>
 <body>
 <div id="panel">
