@@ -68,14 +68,18 @@ Loc::loadMessages(__FILE__);
 </template>
 <template id="callbackForm">
   <div class="callback">
-    <h1 class="callback__title title_section">Начните сотрудничать с&nbsp;нами</h1>
-    <p class="callback__desc">Оставьте свой номер телефона, <br>и в&nbsp;ближайшее время наш специалист свяжется с вами.</p>
+    <h1 class="callback__title title_section">
+      <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/form-title.php", Array(), Array("MODE" => "html"))?>
+    </h1>
+    <p class="callback__desc">
+      <?$APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/form-desc.php", Array(), Array("MODE" => "html"))?>
+    </p>
     <form class="callback__form" method="post" action="/local/tools/form-handler.php">
         <?=bitrix_sessid_post()?>
       <input class="callback__phone-area" id="phoneArea" type="tel" name="phone" placeholder="+7 (___) ___-__-__" value="+7" autofocus>
       <div class="callback__checkbox-wrap">
         <input class="callback__checkbox" id="privacyPolicyCheckbox" name="privacy" type="checkbox" checked>
-        <label class="callback__checkbox-label" for="privacyPolicyCheckbox">Даю согласие на&nbsp;обработку моих персональных данных</label><a class="callback__privacy-policy" href="#" target="_blank" title="Просмотреть политику конфиденциальности">Политика конфиденциальности</a></div>
+        <label class="callback__checkbox-label" for="privacyPolicyCheckbox">Даю согласие на&nbsp;обработку моих персональных данных</label><a class="callback__privacy-policy" href="/privacy/" target="_blank" title="Просмотреть политику конфиденциальности">Политика конфиденциальности</a></div>
       <div class="callback__send-inner">
         <button class="button callback__send-btn button callback__send-btn_disabled" type="submit">Отправить</button>
         <p class="callback__message">23</p>

@@ -4,7 +4,7 @@
     array(
         "IBLOCK_TYPE" => "content",
         "IBLOCK_ID" => "8",
-        "NEWS_COUNT" => "4",
+        "NEWS_COUNT" => "8",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
         "SORT_BY2" => "ACTIVE_FROM",

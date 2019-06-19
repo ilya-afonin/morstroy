@@ -95,7 +95,7 @@ global $APPLICATION;
       ?>
 
       <div class="header__phone">
-        <button class="callback-btn callback-btn_white" id="callbackLink"><svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.41">
+        <button class="callback-btn<?if($APPLICATION->GetProperty("header_white") == 'Y') echo ' callback-btn_white'?>" id="callbackLink"><svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.41">
             <circle class="callback-btn__bg" cx="16.77" cy="16.77" r="16.77" fill="#fff"></circle>
             <clippath id="a">
               <circle cx="16.77" cy="16.77" r="16.77"></circle>

@@ -65,11 +65,11 @@ $arParams["SCRIPT_NAME"] = $_SERVER["SCRIPT_NAME"];
     );*/ ?>
 <section class="page__top-video pageTop">
 
-  <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include/video_bg.php", Array(), Array("MODE" => "html")) ?>
+  <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include/video_bg.php", Array(), Array("MODE" => "html", "NAME" => "видео")) ?>
 
   <div class="container">
     <h1 class="title">
-      <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/objects_title.php", Array(), Array("MODE" => "text")) ?>
+      <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/objects_title.php", Array(), Array("MODE" => "text", "NAME" => "основной заголовок")) ?>
     </h1>
   </div>
 </section>
@@ -87,7 +87,7 @@ $arParams["SCRIPT_NAME"] = $_SERVER["SCRIPT_NAME"];
 <div class="equipments-slider">
 
   <h2 class="equipments-slider__title title title_section">
-    <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/equipment_head.php", Array(), Array("MODE" => "text")) ?>
+    <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/equipment_head.php", Array(), Array("MODE" => "text", "NAME" => "заголовок оборудования")) ?>
   </h2>
 
   <? $APPLICATION->IncludeComponent(
@@ -155,7 +155,7 @@ $arParams["SCRIPT_NAME"] = $_SERVER["SCRIPT_NAME"];
       false
   ); ?>
 
-  <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include/equipment_bg.php", Array(), Array("MODE" => "html")) ?>
+  <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include/equipment_bg.php", Array(), Array("MODE" => "html", "NAME" => "заливку оборудования")) ?>
 
 </div>
 
@@ -163,7 +163,7 @@ $arParams["SCRIPT_NAME"] = $_SERVER["SCRIPT_NAME"];
   <div class="container">
 
     <h2 class="timeline__title title_section">
-      <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/timeline_title.php", Array(), Array("MODE" => "text")) ?>
+      <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/include_areas/" . LANGUAGE_ID . "/timeline_title.php", Array(), Array("MODE" => "text", "NAME" => "заголовок истории")) ?>
     </h2>
 
     <?

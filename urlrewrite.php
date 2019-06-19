@@ -1,5 +1,12 @@
 <?php
 $arUrlRewrite=array (
+  6 => 
+  array (
+    'CONDITION' => '#^/about/advantages/([A-z0-9_]+)/(\\?.*)?#',
+    'RULE' => 'ELEMENT_CODE=$1',
+    'PATH' => '/about/advantages/index.php',
+    'SORT' => 100,
+  ),
   2 => 
   array (
     'CONDITION' => '#^/equipment/#',

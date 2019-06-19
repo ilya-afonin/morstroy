@@ -10,7 +10,7 @@
       $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
       ?>
 
-      <div class="equipments-slider__slide swiper-slide" style="background-image: url(<?=$arItem['DISPLAY_PROPERTIES']['FON']['FILE_VALUE']['SRC']?>)">
+      <div class="equipments-slider__slide swiper-slide swiper-lazy" data-background="<?=$arItem['DISPLAY_PROPERTIES']['FON']['FILE_VALUE']['SRC']?>">
         <p><?=$arItem['NAME']?></p>
       </div>
     <?endforeach;?>

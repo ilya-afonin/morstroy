@@ -1,0 +1,24 @@
+.sp-x-lt-settings {
+    display: none !important;
+}
+.sp-x-buttons-lt2 {
+    display: none;
+}
+[data-name=delete_pack] {
+    display: none;
+}
+.sp-x-lt-col-copy {
+    display: none;
+}
+.sp-x-lt-col-left {
+    display: none;
+}
+.sp-x-lt-col-right {
+    display: none;
+}
+.sp-x-lt-col-index {
+    display: none;
+}
+.sp-x-box-copy {
+    display: none;
+}

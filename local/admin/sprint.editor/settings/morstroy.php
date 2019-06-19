@@ -116,7 +116,7 @@ $settings = array(
 
     //Разрешить добавление указанных сеток
 //    'layout_enabled' => array(
-        'layout_1',
+        //'layout_1',
 //        'layout_2',
 //        'layout_3',
 //        'layout_4',
