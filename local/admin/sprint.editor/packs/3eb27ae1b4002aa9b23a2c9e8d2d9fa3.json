@@ -1,1 +1,1 @@
-{"packname":"Заголовок + текст с серой чертой(о компании)","version":2,"blocks":[{"value":"","name":"text","layout":"0,0"},{"value":"","name":"text","layout":"0,0"}],"layouts":[{"columns":[{"css":"h1_text_row_left"}]}]}
+{"packname":"О компании: Заголовок H1 + текст с серой чертой слева","version":2,"blocks":[{"type":"h1","value":"","anchor":"","name":"htag","layout":"0,0"},{"value":"","name":"text","layout":"0,0"}],"layouts":[{"columns":[{"css":"h1_text_row_left"}]}]}

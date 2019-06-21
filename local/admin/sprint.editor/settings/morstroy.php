@@ -16,7 +16,7 @@ $settings = array(
     //Доступные классы колонок для сеток
     'layout_classes' => array(
         'type1' => array(
-            array('h2_text_row_left', 'h2_row_blue_image', 'file_link', 'my_table','my_video', 'my_3_items_in_row', 'my_gallery')
+            array('h2_text_row_left', 'h2_text_row_left_content', 'h2_row_blue_image', 'file_link', 'my_table','my_video', 'my_3_items_in_row', 'my_gallery')
         ),
 
 //        'type2' => array(
@@ -47,13 +47,14 @@ $settings = array(
 //        'col-md-6' => '50%',
 //        'col-md-4' => '33.33%',
 //        'col-md-3' => '25%',
-          'h2_text_row_left' => 'Заголовок + текст с серой чертой слева',
-          'h2_row_blue_image' => 'Заголовок с голубой чертой снизу + картинка',
-          'file_link' => 'Ссылка на файл',
-          'my_table' => 'Таблица',
-          'my_video' => 'Видео youtube с описанием',
-          'my_3_items_in_row' => 'Блок с 3 картинками и описанием',
-          'my_gallery' => 'Галерея с описанием',
+          'h2_text_row_left' => 'Новости: Заголовок + текст с серой чертой слева',
+          'h2_text_row_left_content' => 'Новости: Заголовок + текст с серой чертой слева + контент',
+          'h2_row_blue_image' => 'Новости: Заголовок с голубой чертой снизу + картинка',
+          'file_link' => 'Новости: Ссылка на файл',
+          'my_table' => 'Новости: Таблица',
+          'my_video' => 'Новости: Видео youtube с описанием',
+          'my_3_items_in_row' => 'Новости: Блок с 3 картинками и описанием',
+          'my_gallery' => 'Новости: Галерея с описанием',
     ),
 
     //Настройки блоков

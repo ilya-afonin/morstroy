@@ -1,1 +1,1 @@
-{"packname":"Заголовок с голубой чертой снизу(о компании)","version":2,"blocks":[{"type":"h2","value":"","anchor":"","name":"htag","layout":"0,0"},{"value":"","name":"text","layout":"0,0"}],"layouts":[{"columns":[{"css":"h2_row_blue"}]}]}
+{"packname":"О компании: Заголовок с голубой чертой снизу","version":2,"blocks":[{"type":"h2","value":"","anchor":"","name":"htag","layout":"0,0"},{"value":"","name":"text","layout":"0,0"}],"layouts":[{"columns":[{"css":"h2_row_blue"}]}]}

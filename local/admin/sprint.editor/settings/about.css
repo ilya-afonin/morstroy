@@ -1,5 +1,8 @@
-.sp-x-lt-settings {
+.sp-x-lt-settings span:not(.sp-active) {
     display: none !important;
+}
+.sp-x-lt-settings span.sp-active {
+    pointer-events:none;
 }
 .sp-x-buttons-lt2 {
     display: none;
@@ -20,5 +23,8 @@
     display: none;
 }
 .sp-x-box-copy {
+    display: none;
+}
+.sp-x-box-del {
     display: none;
 }

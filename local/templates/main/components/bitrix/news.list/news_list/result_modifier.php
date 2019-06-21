@@ -17,7 +17,7 @@ foreach ($arResult['ITEMS'] as $i => &$arItem) {
       "yesterday" => "yesterday",       // выведет "вчера", если дата прошлый день
       "d" => 'j F',                   // выведет "9 июля", если месяц прошел
       "" => 'j F Y',                    // выведет "9 июля 2012", если год прошел
-  ), MakeTimeStamp(($arItem["ACTIVE_FROM"])?$arItem["ACTIVE_FROM"]:$arItem['TIMESTAMP_X']), time());
+  ), MakeTimeStamp(($arItem["ACTIVE_FROM"])?$arItem["ACTIVE_FROM"]:$arItem['DATE_CREATE']), time());
 
 }
 

@@ -10,6 +10,17 @@
 <? } else { ?>
 
   <?
+//
+//  foreach ($layout['columns'] as $columnIndex => $column) {
+//    $pos = $this->layoutIndex . ',' . $columnIndex;
+//
+//    if (isset($this->preparedBlocks[$pos])) {
+//      $content = $this->preparedBlocks[$pos];
+//    }
+//  }
+//
+//  Debug::dtc($content, 'content');
+
 
   switch ($layout['columns'][0]['css']) {
     case 'h1_text_row_left': // название сетки
@@ -20,16 +31,16 @@
           $content = $this->preparedBlocks[$pos];
         }
       }
+
       ?>
-      <? preg_match("/<p[^>]*>(.*?)<\/p>/is", $content[0]['value'], $matches);
-        $main_text = $matches[1];
-      ?>
-      <p class="title"><?= $main_text ?></p>
-      <div class="content content_text">
-        <? preg_match("/<p[^>]*>(.*?)<\/p>/is", $content[1]['value'], $matches);
-        $main_text1 = $matches[1];
-        ?>
-        <p class="left-line"><?=$main_text1?></p>
+      <div class="container">
+        <div class="content content_text">
+          <p class="title"><?= $content[0]['value'] ?></p>
+
+          <? preg_match("/<p[^>]*>(.*?)<\/p>/is", $content[1]['value'], $text);
+          $main_text1 = $text[1];
+          ?>
+          <p class="left-line"><?=$main_text1?></p>
 
         <?//на случай добавления новых текстовых блоков
         for ($i = 2; $i < count($content); $i++):?>
@@ -38,7 +49,7 @@
         <?endfor; ?>
 
       </div>
-
+      </div>
 
       <?
       break;
@@ -192,5 +203,7 @@
     default:
       //echo '<pre>'; print_r('_default'); echo '</pre>';
   } ?>
+
+
 
 <? } ?>
