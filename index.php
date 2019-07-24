@@ -33,9 +33,7 @@ $APPLICATION->SetPageProperty('description', '');
               ),
               "PROPERTY_CODE" => array(
                   0 => "",
-                  1 => "CSS_CLASS_TEXT",
-                  2 => "CSS_CLASS",
-                  3 => "",
+                  1 => "VIDEO",
               ),
               "CHECK_DATES" => "Y",
               "DETAIL_URL" => "",

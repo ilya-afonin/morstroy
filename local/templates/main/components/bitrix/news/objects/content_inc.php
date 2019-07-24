@@ -182,7 +182,11 @@ $arParams["SCRIPT_NAME"] = $_SERVER["SCRIPT_NAME"];
         ),
         "PROPERTY_CODE" => array(
             0 => "WORKS",
-            1 => "",
+
+        ),
+        "DETAIL_PROPERTY_CODE" => array(
+            0 => "PORT",
+            1 => "MORE_PHOTOS"
         ),
         "CHECK_DATES" => "Y",
         "DETAIL_URL" => "/projects/?id=#ELEMENT_ID#",
@@ -191,7 +195,7 @@ $arParams["SCRIPT_NAME"] = $_SERVER["SCRIPT_NAME"];
         "AJAX_OPTION_STYLE" => "Y",
         "AJAX_OPTION_HISTORY" => "N",
         "CACHE_TYPE" => "A",
-        "CACHE_TIME" => "36000006",
+        "CACHE_TIME" => "36000007",
         "CACHE_FILTER" => "N",
         "CACHE_GROUPS" => "N",
         "PREVIEW_TRUNCATE_LEN" => "",

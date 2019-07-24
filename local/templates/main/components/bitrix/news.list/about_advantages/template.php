@@ -11,8 +11,7 @@
     <li class="swiper-slide advantages__item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
       <div style="background-image: url(<?=$arItem['DISPLAY_PROPERTIES']['ICON']['FILE_VALUE']['SRC']?>)"></div>
       <h3><?=$arItem['NAME']?></h3>
-      <p><?=html_entity_decode($arItem['PREVIEW_TEXT'])?></p>
-      <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" title="Подробнее">Подробнее</a>
+      <p><?=html_entity_decode($arItem['PREVIEW_TEXT'])?></p> 
     </li>
 
   <? endforeach; ?>

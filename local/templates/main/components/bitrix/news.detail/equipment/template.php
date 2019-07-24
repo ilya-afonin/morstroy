@@ -24,10 +24,12 @@ $this->setFrameMode(true);
       <h2 class="detail__title"><?=$arResult['NAME']?></h2>
     </div>
 
-    <div class="detail__city">
-      <span class="detail__info"><?=$arResult['PROPERTIES']['PORT']['VALUE']?></span>
-      <p class="detail__desc">Порт прописки</p>
-    </div>
+    <?if(!empty($arResult['PROPERTIES']['PORT']['VALUE'])):?>
+      <div class="detail__city">
+        <span class="detail__info"><?=$arResult['PROPERTIES']['PORT']['VALUE']?></span>
+        <p class="detail__desc">Порт прописки</p>
+      </div>
+    <?endif;?>
     <?foreach($arResult['PROPERTIES']['OPTIONS']['VALUE'] as $o => $option):?>
       <div class="detail__item">
         <span class="detail__info">

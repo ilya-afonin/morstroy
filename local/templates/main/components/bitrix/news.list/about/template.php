@@ -65,7 +65,7 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "N",
 		"CACHE_TYPE" => "N",
-		"CACHE_TIME" => "36000006",
+		"CACHE_TIME" => "36000007",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "N",
 		"PREVIEW_TRUNCATE_LEN" => "",

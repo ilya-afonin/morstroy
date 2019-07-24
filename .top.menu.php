@@ -9,7 +9,7 @@ $aMenuLinks = Array(
     ),
 	Array(
 		"Виды деятельности",
-		"/",
+		"/services/",
 		Array(), 
 		Array(), 
 		"" 
