@@ -34,7 +34,7 @@ $APPLICATION->SetTitle("Сертификаты");?>
             3 => "",
         ),
         "PROPERTY_CODE" => array(
-            0 => "",
+            0 => "PDF",
             1 => "",
         ),
         "CHECK_DATES" => "Y",
@@ -44,7 +44,7 @@ $APPLICATION->SetTitle("Сертификаты");?>
         "AJAX_OPTION_STYLE" => "Y",
         "AJAX_OPTION_HISTORY" => "N",
         "CACHE_TYPE" => "A",
-        "CACHE_TIME" => "36000006",
+        "CACHE_TIME" => "36000007",
         "CACHE_FILTER" => "N",
         "CACHE_GROUPS" => "N",
         "PREVIEW_TRUNCATE_LEN" => "",
